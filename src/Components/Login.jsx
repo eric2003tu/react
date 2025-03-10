@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../index.css'
 function Login(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -140,7 +141,7 @@ function Login(){
 
     }
     return(
-      <div>
+      <div className='max-h-fit h-fit '>
         <form
   onSubmit={handleLogin}
   id="loginForm"
@@ -216,8 +217,8 @@ function Login(){
     ></div>
   </button>
 </form>
-<div id='footer' className="max-w-[100%]">
-<div id="footer" className="bg-[#a59c9c] max-w-[100%] left-0 right-0 w-full p-4 text-center absolute mt-[25px]">
+<div id='footer' className="">
+<div id="footer" className="bg-[#a59c9c] max-w-[100%] left-0 right-0 w-full p-4 text-center absolute mt-[10%]">
   <p className="font-bold text-center">© 2025 E-library. All Rights Reserved.</p>
 </div>
 

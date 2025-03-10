@@ -1,4 +1,6 @@
 @import "tailwindcss";
 body{
   background-color: white;
+  max-height: fit-content;
+  height: fit-content;
 }
