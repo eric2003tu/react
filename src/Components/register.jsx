@@ -454,10 +454,11 @@ function Register(){
         });
     }
     return(
+      <div>
         <form
   onSubmit={handleRegister}
   id="signupForm"
-  className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-[100px] sm:w-[80%] lg:w-[50%] lg:justify-self-center md:w-fit p-[20px] border-[2px] border-gray-400 rounded-4xl shadow-[2px_3px_10px]"
+  className="grid grid-cols-1 sm:grid-cols-1 gap-1 mt-[100px] sm:w-[70%] lg:w-[50%] lg:justify-self-center md:w-fit p-[20px] border-[2px] border-gray-400 rounded-4xl shadow-[2px_3px_10px]"
 >
   {/* Header */}
   <h1
@@ -473,7 +474,7 @@ function Register(){
   </p>
 
   {/* First Name */}
-  <label htmlFor="Fname" className="text-green-500 font-bold">
+  <label htmlFor="Fname" className="text-black font-bold">
     First Name
   </label>
   <input
@@ -483,14 +484,14 @@ function Register(){
     placeholder="Enter the firstname"
     onChange={(data) => setFname(data.target.value)}
     style={{ borderColor: FnameBorder }}
-    className="p-[7px] w-full rounded-[10px] mb-[27px] border-2 border-fuchsia-400"
+    className="w-full p-4 mt-2 border rounded-lg focus:outline-none"
   />
   <p style={{ color: errorColor }} className="col-span-full">
     {FnameError}
   </p>
 
   {/* Last Name */}
-  <label htmlFor="Lname" className="text-green-500 font-bold">
+  <label htmlFor="Lname" className="text-black font-bold">
     Last Name
   </label>
   <input
@@ -500,14 +501,14 @@ function Register(){
     value={Lname}
     onChange={(data) => setLname(data.target.value)}
     style={{ borderColor: LnameBorder }}
-    className="p-[7px] w-full rounded-2xl mb-[27px] border-2 border-green-300"
+    className="w-full p-4 mt-2 border rounded-lg focus:outline-none"
   />
   <p style={{ color: errorColor }} className="col-span-full">
     {LnameError}
   </p>
 
   {/* Email */}
-  <label htmlFor="email" className="text-green-500 font-bold">
+  <label htmlFor="email" className="text-black font-bold">
     Email
   </label>
   <input
@@ -517,14 +518,14 @@ function Register(){
     value={email}
     onChange={(data) => setEmail(data.target.value)}
     style={{ borderColor: emailBorder }}
-    className="p-[7px] w-full rounded-2xl mb-[27px] border-2 border-green-300"
+    className="w-full p-4 mt-2 border rounded-lg focus:outline-none"
   />
   <p style={{ color: errorColor }} className="col-span-full">
     {emailError}
   </p>
 
   {/* Phone */}
-  <label htmlFor="phone" className="text-green-500 font-bold">
+  <label htmlFor="phone" className="text-black font-bold">
     Phone
   </label>
   <input
@@ -534,14 +535,14 @@ function Register(){
     value={phone}
     onChange={(data) => setPhone(data.target.value)}
     style={{ borderColor: phoneBorder }}
-    className="p-[7px] w-full rounded-2xl mb-[27px] border-2 border-green-300"
+    className="w-full p-4 mt-2 border rounded-lg focus:outline-none"
   />
   <p style={{ color: errorColor }} className="col-span-full">
     {phoneError}
   </p>
 
   {/* Password */}
-  <label htmlFor="password" className="text-green-500 font-bold">
+  <label htmlFor="password" className="text-black font-bold">
     Password
   </label>
   <input
@@ -551,14 +552,14 @@ function Register(){
     value={password}
     onChange={(data) => setPassword(data.target.value)}
     style={{ borderColor: passwordBorder }}
-    className="p-[7px] w-full rounded-2xl mb-[27px] border-2 border-green-300"
+    className="w-full p-4 mt-2 border rounded-lg focus:outline-none"
   />
   <p style={{ color: errorColor }} className="col-span-full">
     {passwordError}
   </p>
 
   {/* Confirm Password */}
-  <label htmlFor="confirmPassword" className="text-green-500 font-bold">
+  <label htmlFor="confirmPassword" className="text-black font-bold">
     Confirm Password
   </label>
   <input
@@ -568,7 +569,7 @@ function Register(){
     value={confirmpassword}
     onChange={(data) => setConfirmpassword(data.target.value)}
     style={{ borderColor: confirmpasswordBorder }}
-    className="p-[7px] w-full rounded-2xl mb-[27px] border-2 border-green-300"
+    className="w-full p-4 mt-2 border rounded-lg focus:outline-none"
   />
   <p style={{ color: errorColor }} className="col-span-full">
     {confirmpasswordError}
@@ -576,7 +577,7 @@ function Register(){
 
   {/* Gender */}
   <div className="col-span-full">
-    <p className="text-green-500 font-bold">
+    <p className="text-black font-bold">
       <input
         type="radio"
         name="gender"
@@ -616,6 +617,13 @@ function Register(){
     ></div>
   </button>
 </form>
+<div id='footer' className="max-w-[100%]">
+<div id="footer" className="bg-[#a59c9c] max-w-[100%] left-0 right-0 w-full p-4 text-center absolute mt-[25px]">
+  <p className="font-bold text-center">© 2025 E-library. All Rights Reserved.</p>
+</div>
+
+</div>
+</div>
     )
     
 }

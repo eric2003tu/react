@@ -140,10 +140,11 @@ function Login(){
 
     }
     return(
+      <div>
         <form
   onSubmit={handleLogin}
   id="loginForm"
-  className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-[100px] sm:w-[80%] lg:w-[50%] lg:justify-self-center md:w-fit md:justify-self-center p-[20px] border-[2px] border-gray-400 rounded-4xl shadow-[2px_3px_10px]"
+  className="grid grid-cols-1 sm:grid-cols-1 gap-1 mt-[100px] sm:w-[70%] lg:w-[50%] lg:justify-self-center md:w-fit p-[20px] border-[2px] border-gray-400 rounded-4xl shadow-[2px_3px_10px]"
 >
   {/* Header */}
   <h1
@@ -159,7 +160,7 @@ function Login(){
   </p>
 
   {/* Email */}
-  <label htmlFor="Email" className="text-green-500 font-bold">
+  <label htmlFor="Email" className="text-black font-bold">
     Email
   </label>
   <input
@@ -170,14 +171,14 @@ function Login(){
     placeholder="Enter Email address"
     style={{ borderColor: emailBorder }}
     onChange={(values) => setEmail(values.target.value)}
-    className="p-[7px] w-full rounded-2xl mb-[27px] border-2 border-green-300"
+    className="w-full p-4 mt-2 border rounded-lg focus:outline-none"
   />
   <p style={{ color: "red" }} className="col-span-full">
     {emailError}
   </p>
 
   {/* Password */}
-  <label htmlFor="Password" className="text-green-500 font-bold">
+  <label htmlFor="Password" className="text-blach font-bold">
     Password
   </label>
   <input
@@ -188,7 +189,7 @@ function Login(){
     placeholder="Enter password"
     style={{ borderColor: passwordBorder }}
     onChange={(data) => setPassword(data.target.value)}
-    className="p-[7px] w-full rounded-2xl mb-[27px] border-2 border-green-300"
+    className="w-full p-4 mt-2 border rounded-lg focus:outline-none"
   />
   <p style={{ color: "red" }} className="col-span-full">
     {passwordError}
@@ -215,6 +216,13 @@ function Login(){
     ></div>
   </button>
 </form>
+<div id='footer' className="max-w-[100%]">
+<div id="footer" className="bg-[#a59c9c] max-w-[100%] left-0 right-0 w-full p-4 text-center absolute mt-[25px]">
+  <p className="font-bold text-center">© 2025 E-library. All Rights Reserved.</p>
+</div>
+
+</div>
+</div>
     )
 }
 export default Login;

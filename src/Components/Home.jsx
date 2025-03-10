@@ -6,8 +6,9 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoCallSharp } from "react-icons/io5";
 function Home(){
     return(
-<div id='all' className='lg:w-full md:w-full sm:w-full mt-[100px]'>
-<div id='contents' className='grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1'>
+        <>
+<div id='all' className=' min-h-screen flex flex-col lg:w-full md:w-full sm:w-full mt-[100px]'>
+<div id='contents' className='grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 flex-grow'>
 <div id='words' className=''>
 Welcome to [Your Company Name], where innovation meets excellence. We are dedicated to providing top-quality [products/services] tailored to meet your unique needs. Whether you're looking for [specific product/service] or seeking expert advice, our team is here to guide you every step of the way. Explore our offerings and discover how we can help you achieve your goals with ease and efficiency.<br/><br/>
 
@@ -51,14 +52,17 @@ Get in touch with us through the Contact Us section, where you'll find all the w
 
 </div>
 
+
 </div>
-<div id='footer'>
-<div className='fixed bg-[#a59c9c] w-full  justify-center  right-0 bottom-0 left-0 p-4'>
-  <p className='font-bold '>© 2025 E-library. All Rights Reserved.</p>
-</div>
+<div id='footer' className="max-w-[100%]">
+<div id="footer" className="bg-[#a59c9c] max-w-[100%] left-0 right-0 w-full p-4 text-center absolute">
+  <p className="font-bold text-center">© 2025 E-library. All Rights Reserved.</p>
 </div>
 
 </div>
+</div>
+</>
+
     )
 }
 export default Home;

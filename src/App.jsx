@@ -25,7 +25,6 @@ function App() {
         <li className='text-blue-500 text-[24px] cursor-pointer hover:text-green-400 active:text-blue-300'><Link to='/' className=''>Home</Link></li>
         <li className='text-blue-500 text-[24px] cursor-pointer hover:text-green-400 active:text-blue-300'><Link to='/register'>Regiter</Link></li>
         <li className='text-blue-500 text-[24px] cursor-pointer hover:text-green-400 active:text-blue-300'><Link to='/login'>Login</Link></li>
-        <li className='text-blue-500 text-[24px] cursor-pointer hover:text-green-400 active:text-blue-300'><Link to='/form'>Form</Link></li>
       </ul>
       <div onClick={handleHide} className='block md:hidden lg:hidden sm:block'>
 
@@ -37,7 +36,6 @@ function App() {
       <li className='p-4 border-b border-gray-600 cursor-pointer' onClick={handleHide}><Link to='/' className=''>Home</Link></li>
       <li className='p-4 border-b border-gray-600 cursor-pointer' onClick={handleHide}><Link to='/register'>Regiter</Link></li>
       <li className='p-4 border-b border-gray-600 cursor-pointer' onClick={handleHide}><Link to='/login'>Login</Link></li>
-      <li className='p-4 border-b border-gray-600 cursor-pointer' onClick={handleHide}><Link to='/form'>Form</Link></li>
       <li className='p-4 border-b border-gray-600 cursor-pointer'onClick={handleHide}>Contact</li>
     </ul>
     <p className={!nav ? 'w-[60%] flex h-full justify-items-start bg-yellow-100 ease-in-out duration-600 sm:fixed flex-wrap md:hidden lg:hidden' : 'hidden' }>
