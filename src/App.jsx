@@ -4,7 +4,7 @@ import './index.css'
 import {AiOutlineClose, AiOutlineMenu,AiOutlineSetting} from 'react-icons/ai';
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdContactMail } from "react-icons/md";
-import Form from './Components/form'
+import Form from './Components/Form'
 import Register from './Components/register'
 import { BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
 import Login from './Components/Login'
