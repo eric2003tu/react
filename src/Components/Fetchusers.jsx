@@ -22,9 +22,10 @@ function Fetchusers(){
       })
     },[]);
     return(
-      <div>
+      <>
+      <div className='mt-[100px]'>
         <h1>Users</h1>
-        <ul>
+        <ul className='justify-items-start'>
           {user.map(function(user){
             return(
             <li key={user.id}><strong>{user.name}</strong><br/>
@@ -33,7 +34,16 @@ function Fetchusers(){
             </li>);
           })}
         </ul>
+        
       </div>
+      <div id='footer' className="max-w-[100%]">
+      <div id="footer" className="bg-[#a59c9c] max-w-[100%] left-0 right-0 w-full p-4 text-center absolute">
+      <p className="font-bold text-center">© 2025 E-library. All Rights Reserved.
+
+      </p>
+</div>
+</div>
+      </>
     )
   }
   export default Fetchusers;

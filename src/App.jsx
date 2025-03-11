@@ -26,6 +26,9 @@ function App() {
         <li className='text-blue-500 text-[24px] cursor-pointer hover:text-blue-400 active:text-blue-300'><Link to='/' className=''>Home</Link></li>
         <li className='text-blue-500 text-[24px] cursor-pointer hover:text-blue-400 active:text-blue-300'><Link to='/register'>Regiter</Link></li>
         <li className='text-blue-500 text-[24px] cursor-pointer hover:text-blue-400 active:text-blue-300'><Link to='/login'>Login</Link></li>
+        <li className='text-blue-500 text-[24px] cursor-pointer hover:text-blue-400 active:text-blue-300'>
+          <Link to ='/dashboard'>Dashboard</Link>
+        </li>
       </ul>
       <div onClick={handleHide} className='block md:hidden lg:hidden sm:block'>
 
@@ -37,6 +40,9 @@ function App() {
       <li className='p-4 border-b border-gray-600 cursor-pointer' onClick={handleHide}><Link to='/' className=''>Home</Link></li>
       <li className='p-4 border-b border-gray-600 cursor-pointer' onClick={handleHide}><Link to='/register'>Regiter</Link></li>
       <li className='p-4 border-b border-gray-600 cursor-pointer' onClick={handleHide}><Link to='/login'>Login</Link></li>
+      <li className='p-4 border-b border-gray-600 cursor-pointer' onClick={handleHide}>
+          <Link to ='/dashboard'>Dashboard</Link>
+        </li>
       <li className='p-4 border-b border-gray-600 cursor-pointer'onClick={handleHide}>Contact</li>
       <li className=' justify-between grid grid-cols-2 gap- border-b border-gray-600 cursor-pointer '>
       <h1 className='m-auto cursor-pointer text-[blue]'>
