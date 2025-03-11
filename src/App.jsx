@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
 import Login from './Components/Login'
 import Dashboard from './Components/dashboard'
 import Home from './Components/Home';
+import Basic from './Components/basic';
 
 function App() {
   const [nav, setNav] = useState(true);
@@ -19,7 +20,7 @@ function App() {
 
   return (
 <Router>
-  <div className='md:w-full  pl-6 bg-[#38be4c] font-bold rounded-9xl text-10xl sm: w-full lg:w-full fixed top-0 right-0 justify-items-end'>
+  {/* <div className='md:w-full  pl-6 bg-[#38be4c] font-bold rounded-9xl text-10xl sm: w-full lg:w-full fixed top-0 right-0 justify-items-end'>
     <div className='justify-items-end md:w-full p-3 m-1 lg:w-full sm:w-full min-w-full bg-green-400 rounded-2xl text-gray-800'>
       <p className=' flex justify-self-start justify-between text-blue-500 font-bold text-[24px] '>E-library</p>
       <ul className='p-1.5 hidden sm:hidden  gap-5 lg:flex md:flex'>
@@ -58,9 +59,9 @@ function App() {
     </ul>
   </div>
   </div>
-  </div>
+  </div> */}
   <Routes>
-    <Route path='/' element=  {<Home/>}/>
+    <Route path='/' element=  {<Basic/>}/>
     <Route path='/register' element={<Register/>}/>
     <Route path='/form' element = {<Form/>}/>
     <Route path='/login' element= {<Login/>}/>
