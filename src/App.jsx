@@ -19,7 +19,7 @@ function App() {
       }
 return (
 <Router>
-  <nav className="w-full bg-blue-600 text-white p-4 fixed top-0 z-[1000] right-0 m-0">
+  <nav className="w-full bg-blue-600 text-white p-4 fixed top-0 z-[1000] right-0 m-0 sm:pb-[55px] sm:pr-[7px]">
                   <ul className="hidden container mx-auto lg:flex md:flex justify-around sm:hidden">
                       <li><Link to='/' className="hover:text-blue-300">Home</Link></li>
                       <li><Link to='/login' className="hover:text-blue-300">Login</Link></li>
