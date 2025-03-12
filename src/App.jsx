@@ -30,19 +30,19 @@ return (
                        {!nav ? <AiOutlineClose size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end'/> : <AiOutlineMenu size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end'/> }
                   </div>
                   <div className={!nav ? 'fixed h-fit justify-items-start left-0 top-0 w-[50%] border-r border-r-gray-900 bg-[#2f163c] ease-in-out duration-600 sm:fixed flex-wrap md:hidden lg:hidden' : 'fixed left-[-100%]' }>
-                     <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Home page</h1>
-                      <ul className="uppercase w-ull space-3 border border-gray-500">
+                    <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Home page</h1>
+                    <ul className="uppercase w-ull space-3 border border-gray-500">
                       <li><Link to='/' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Home</Link></li>
-                          <li><Link to='/login' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Login</Link></li>
-                          <li><Link to='/register' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Register</Link>
-                          </li>
-                          <li><Link to='/dashboard' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Dashboard</Link>
-                          </li>
-                      </ul>
+                      <li><Link to='/login' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Login</Link></li>
+                      <li><Link to='/register' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Register</Link>
+                      </li>
+                      <li><Link to='/dashboard' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Dashboard</Link>
+                      </li>
+                    </ul>
                   </div>
               </nav>
   <Routes>
-    <Route path='/' element=  {<Basic/>}/>
+    <Route path='/' element=  {<Home/>}/>
     <Route path='/register' element={<Register/>}/>
     <Route path='/form' element = {<Form/>}/>
     <Route path='/login' element= {<Login/>}/>
