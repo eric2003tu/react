@@ -20,31 +20,22 @@ function Basic() {
         <div className="min-h-screen bg-gray-100 max-w-full w-full m-0">
             <nav className="w-full bg-blue-600 text-white p-4 fixed top-0 z-[1000] right-0 m-0">
                 <ul className="hidden container mx-auto lg:flex md:flex justify-around sm:hidden">
-                    <li><Link to='/dashboard' className="hover:text-blue-300">Home</Link></li>
-                    <li><Link to='/dashboard/notifications' className="hover:text-blue-300">Notification</Link></li>
-                    <li><Link to='/dashboard/profile' className="hover:text-blue-300">Profile</Link></li>
-                    <li><Link to='/dashboard/posts' className="hover:text-blue-300">Posts</Link></li>
-                     <li><Link to='/dashboard/users' className="hover:text-blue-300">Users</Link></li>
-                    <li><Link to ='/' id='logout' className='logout' onClick={function(){navigate('/'); }}>Logout</Link>
-                    </li>
+                    <li><Link to='/' className="hover:text-blue-300">Home</Link></li>
+                    <li><Link to='/login' className="hover:text-blue-300">Login</Link></li>
+                    <li><Link to='/register' className="hover:text-blue-300">Register</Link></li>
+                    <li><Link to='/dashboard' className="hover:text-blue-300">Dashboard</Link></li>
                 </ul>
                 <div onClick={handleHide} className='block md:hidden lg:hidden sm:block'>
                      {!nav ? <AiOutlineClose size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end'/> : <AiOutlineMenu size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end'/> }
                 </div>
                 <div className={!nav ? 'fixed h-fit justify-items-start left-0 top-0 w-[50%] border-r border-r-gray-900 bg-[#2f163c] ease-in-out duration-600 sm:fixed flex-wrap md:hidden lg:hidden' : 'fixed left-[-100%]' }>
-                   <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Dash board</h1>
+                   <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Home page</h1>
                     <ul className="uppercase w-ull space-3 border border-gray-500">
-                        <li><Link to='/dashboard' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Home</Link></li>
-                        <li><Link to='/dashboard/notifications' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Notification</Link>
+                    <li><Link to='/' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Home</Link></li>
+                        <li><Link to='/login' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Login</Link></li>
+                        <li><Link to='/register' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Register</Link>
                         </li>
-                        <li><Link to='/dashboard/profile' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer mb-[10px]" onClick={handleHide}>Profile</Link>
-                        </li>
-                        <li><Link to='/dashboard/posts' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Posts</Link>
-                        </li>
-                        <li><Link to='/dashboard/users' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Users</Link>
-                        </li>
-                        <li><Link to ='/' id='logout' className='p-4 border-b border-gray-600 cursor-pointer' onClick={function(){
-                            navigate('/'); }}>Logout</Link>
+                        <li><Link to='/dashboard' className="hover:text-blue-300 p-4 border-b border-gray-600 cursor-pointer" onClick={handleHide}>Dashboard</Link>
                         </li>
                     </ul>
                 </div>
