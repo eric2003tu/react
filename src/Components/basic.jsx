@@ -23,7 +23,7 @@ function Basic() {
                     <li><Link to='/register' className="hover:text-blue-300">Register</Link></li>
                     <li><Link to='/dashboard' className="hover:text-blue-300">Dashboard</Link></li>
                 </ul>
-                <div onClick={handleHide} className='block md:hidden lg:hidden sm:block sm:pb-[20px]'>
+                <div onClick={handleHide} className='block md:hidden lg:hidden sm:block sm:pb-[55px] sm:pr[7px]'>
                      {!nav ? <AiOutlineClose size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end fixed right-0'/> : <AiOutlineMenu size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end fixed right-0'/> }
                 </div>
                 <div className={!nav ? 'fixed h-fit justify-items-start left-0 top-0 w-[50%] border-r border-r-gray-900 bg-[#2f163c] ease-in-out duration-600 sm:fixed flex-wrap md:hidden lg:hidden' : 'fixed left-[-100%]' }>
