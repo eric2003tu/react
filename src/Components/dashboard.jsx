@@ -41,7 +41,7 @@ return(
                             </Link></li>
                         </ul>
                         <div onClick={handleHide} className='block md:hidden lg:hidden sm:block sm:pb-[55px] sm:pr[7px]'>
-                        {!nav ? <AiOutlineClose size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end fixed right-0'/> : <AiOutlineMenu size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end fixed right-0'/> }
+                        {!nav ? <AiOutlineClose size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end fixed [10px] mt-[18px]'/> : <AiOutlineMenu size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end fixed [10px] mt-[18px]'/> }
                         </div>
                         <div className={!nav ? 'fixed h-fit justify-items-start left-0 top-0 w-[50%] border-r border-r-gray-900 bg-[#271246] ease-in-out duration-600 sm:fixed flex-wrap md:hidden lg:hidden' : 'fixed left-[-100%]' }>
                         <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Dash board</h1>
