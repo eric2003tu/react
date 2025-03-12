@@ -34,7 +34,7 @@ function Dashhome() {
                                     <div onClick={handleHide} className='block md:hidden lg:hidden sm:block'>
                                     {!nav ? <AiOutlineClose size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end'/> : <AiOutlineMenu size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end'/> }
                                     </div>
-                                    <div className={!nav ? 'fixed h-full justify-items-start left-0 top-0 w-[50%] border-r border-r-gray-900 bg-[#271246] ease-in-out duration-600 sm:fixed flex-wrap md:hidden lg:hidden' : 'fixed left-[-100%]' }>
+                                    <div className={!nav ? 'fixed h-fit justify-items-start left-0 top-0 w-[50%] border-r border-r-gray-900 bg-[#271246] ease-in-out duration-600 sm:fixed flex-wrap md:hidden lg:hidden' : 'fixed left-[-100%]' }>
                                     <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Dash board</h1>
                                     <ul className="uppercase w-full">
                                         <li><Link to='/dashboard' className="hover:text-blue-300" onClick={handleHide}>Home</Link></li>
