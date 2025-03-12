@@ -34,7 +34,7 @@ return (
                 </div>
             </nav>
             <div className={!nav ? 'fixed h-fit justify-items-start left-0 mt-[32px] w-[40%] border-r border-r-gray-900 bg-[#5147d9] ease-in-out duration-600 sm:fixed flex-wrap md:hidden lg:hidden' : 'fixed left-[-100%]'}>
-                <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Home page</h1>
+                <h1 className='w-full text-[14px] font-bold text-[#00df9a]'>Home page</h1>
                 <ul className="uppercase w-full">
                     <li className="border-b border-t border-gray-400 w-full pb-[10px]"><Link to='/' className="text-white hover:text-green-300" onClick={handleHide}>Home</Link></li>
                     <li className="border-b border-gray-400 w-full pb-[10px]"><Link to='/login' className="text-white hover:text-green-300" onClick={handleHide}>Notification</Link></li>
