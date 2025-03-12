@@ -12,49 +12,44 @@ from 'react-icons/ai';
 
 function Dashhome() {
     const navigate = useNavigate();
-          const [nav, setNav] = useState(true);
-          const handleHide = function(){
-              setNav(!nav)
-          }
+    const [nav, setNav] = useState(true);
+    const handleHide = function(){
+        setNav(!nav);
+    }
     return (
         <div className="min-h-screen bg-gray-100 max-w-full w-full m-0">
-                    <nav className="w-full bg-blue-600 text-white p-4 fixed top-0 z-[1000] right-0 m-0">
-                                    <ul className="hidden container mx-auto lg:flex md:flex justify-around sm:hidden">
-                                        <li><Link to='/dashboard' className="hover:text-blue-300">Home</Link></li>
-                                        <li><Link to='/dashboard/notifications' className="hover:text-blue-300">Notification</Link></li>
-                                        <li><Link to='/dashboard/profile' className="hover:text-blue-300">Profile</Link></li>
-                                        <li><Link to='/dashboard/posts' className="hover:text-blue-300">Posts</Link></li>
-                                        <li><Link to='/dashboard/users' className="hover:text-blue-300">Users</Link></li>
-                                        <li><Link to ='/' id='logout' className='logout' onClick={function(){
-                                            navigate('/');
-                                        }}>
-                                        Logout
-                                        </Link></li>
-                                    </ul>
-                                    <div onClick={handleHide} className='block md:hidden lg:hidden sm:block'>
-                                    {!nav ? <AiOutlineClose size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end'/> : <AiOutlineMenu size={30} className='text-white font-bold cursor-pointer justify-end justify-self-end'/> }
-                                    </div>
-                                    <div className={!nav ? 'fixed h-fit justify-items-start left-0 top-0 w-[50%] border-r border-r-gray-900 bg-[#271246] ease-in-out duration-600 sm:fixed flex-wrap md:hidden lg:hidden' : 'fixed left-[-100%]' }>
-                                    <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Dash board</h1>
-                                    <ul className="uppercase w-full">
-                                        <li><Link to='/dashboard' className="hover:text-blue-300" onClick={handleHide}>Home</Link></li>
-                                        <li><Link to='/dashboard/notifications' className="hover:text-blue-300" onClick={handleHide}>Notification</Link></li>
-                                        <li><Link to='/dashboard/profile' className="hover:text-blue-300" onClick={handleHide}>Profile</Link></li>
-                                        <li><Link to='/dashboard/posts' className="hover:text-blue-300" onClick={handleHide}>Posts</Link></li>
-                                        <li><Link to='/dashboard/users' className="hover:text-blue-300" onClick={handleHide}>Users</Link></li>
-                                        <li><Link to ='/' id='logout' className='logout' onClick={function(){
-                                             navigate('/');
-                                    }}>Logout</Link></li>
-                                    </ul>
-                                    </div>
-                                </nav>
+            <nav className="w-full bg-blue-600 text-white p-4 fixed top-0 z-[1000] right-0 m-0 flex justify-between items-center">
+            <h1 className="font-bold">E-LIBRARY</h1>
+                <ul className="hidden container mx-auto lg:flex md:flex justify-around sm:hidden">
+                    <li><Link to='/dashboard' className="hover:text-blue-300">Home</Link></li>
+                    <li><Link to='/dashboard/notifications' className="hover:text-blue-300">Notification</Link></li>
+                    <li><Link to='/dashboard/profile' className="hover:text-blue-300">Profile</Link></li>
+                    <li><Link to='/dashboard/posts' className="hover:text-blue-300">Posts</Link></li>
+                    <li><Link to='/dashboard/users' className="hover:text-blue-300">Users</Link></li>
+                    <li><Link to ='/' id='logout' className='logout' onClick={() => navigate('/')}>Logout</Link></li>
+                </ul>
+                <div onClick={handleHide} className='block md:hidden lg:hidden sm:block ml-auto'>
+                    {!nav ? <AiOutlineClose size={30} className='text-white font-bold cursor-pointer'/> : <AiOutlineMenu size={30} className='text-white font-bold cursor-pointer'/> }
+                </div>
+            </nav>
+            <div className={!nav ? 'fixed h-fit justify-items-start left-0 mt-[32px] pb-[10px] w-[40%] border-r border-r-gray-900 bg-[#5147d9] ease-in-out duration-600 sm:fixed flex-wrap md:hidden lg:hidden' : 'fixed left-[-100%]'}>
+                <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Dash board</h1>
+                <ul className="uppercase w-full">
+                    <li className="border-b border-t border-gray-400 w-full pb-[10px]"><Link to='/dashboard' className="text-white hover:text-green-300" onClick={handleHide}>Home</Link></li>
+                    <li className="border-b border-gray-400 w-full pb-[10px]"><Link to='/dashboard/notifications' className="text-white hover:text-green-300" onClick={handleHide}>Notification</Link></li>
+                    <li className="border-b border-gray-400 w-full pb-[10px]"><Link to='/dashboard/profile' className="text-white hover:text-green-300" onClick={handleHide}>Profile</Link></li>
+                    <li className="border-b border-gray-400 w-full pb-[10px]"><Link to='/dashboard/posts' className="text-white hover:text-green-300" onClick={handleHide}>Posts</Link></li>
+                    <li className="border-b border-gray-400 w-full pb-[10px]"><Link to='/dashboard/users' className="text-white hover:text-green-300" onClick={handleHide}>Users</Link></li>
+                    <li className="border-b border-gray-400 w-full pb-[10px]"><Link to ='/' id='logout' className='text-red-600 font-bold hover:text-red-400' onClick={() => navigate('/')}>Logout</Link></li>
+                </ul>
+            </div>
             <div className="container mx-auto pt-20 grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
                 <div className="bg-white p-4 shadow rounded-lg">
                     <h1 className="bg-blue-900 text-white font-bold p-2 rounded-t-lg">HOW CAN I?</h1>
                     <ul className="space-y-2 mt-2">
                         {["Learn the Library", "Signup for a library workshop", "Access Refworks", "Request interlibrary loan items", "Test my library Skills", "Access alumni resources"].map((item, index) => (
                             <li key={index} className="text-blue-500 hover:text-blue-700 p-2 border-b border-gray-200">
-                                <Link to='//'>{item}</Link>
+                                <Link to='/'>{item}</Link>
                             </li>
                         ))}
                     </ul>
@@ -93,30 +88,12 @@ function Dashhome() {
                     <div className="bg-indigo-900 text-white p-4 rounded-lg my-4">
                         <h1 className="font-bold">CAN'T FIND IT IN THE LIBRARY?</h1>
                         <p>WE WILL GET IT FOR YOU.</p>
-                        <Link to='//' className="inline-block bg-black text-white font-bold p-2 rounded mt-2">INTERLIBRARY LOAN</Link>
+                        <Link to='/' className="inline-block bg-black text-white font-bold p-2 rounded mt-2">INTERLIBRARY LOAN</Link>
                     </div>
                     <h1 className="bg-blue-900 text-white font-bold p-2 rounded-lg">POPULAR LIBRARY WORKSHOPS</h1>
-                </div>
-                <div className="bg-white p-4 shadow rounded-lg">
-                    <h1 className="bg-blue-900 text-white font-bold p-2 rounded-t-lg">NEED HELP? ASK US!</h1>
-                    <div className="grid grid-cols-2 gap-4 p-4">
-                        <FaRegQuestionCircle size={25} />
-                        <span className="font-bold">Ask us</span>
-                        <MdEmail size={25} />
-                        <span className="font-bold">Email Us</span>
-                        <span className="col-span-2 text-green-500">Email us with your question</span>
-                        <BiSolidMessageRounded size={25} />
-                        <span className="font-bold">Chat with Us</span>
-                        <button className="col-span-2 bg-black text-white font-bold p-2 rounded">Chat with us</button>
-                        <span className="col-span-2">Available during library staffed hours referenced below</span>
-                        <IoIosPhonePortrait size={25} />
-                        <span className="font-bold">Call Us</span>
-                        <span className="col-span-2">Phone: +250788876534</span>
-                    </div>
                 </div>
             </div>
         </div>
     );
 }
-
 export default Dashhome;
