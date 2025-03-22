@@ -26,7 +26,7 @@ function Dashhome() {
                     <li><Link to='/dashboard/profile' className="hover:text-blue-300">Profile</Link></li>
                     <li><Link to='/dashboard/posts' className="hover:text-blue-300">Posts</Link></li>
                     <li><Link to='/dashboard/users' className="hover:text-blue-300">Users</Link></li>
-                    <li><Link to ='/' id='logout' className='logout' onClick={() => navigate('/')}>Logout</Link></li>
+                    <li><Link to ='/' id='logout' className='text-red-600 font-bold hover:text-red-400' onClick={() => navigate('/')}>Logout</Link></li>
                 </ul>
                 <div onClick={handleHide} className='block md:hidden lg:hidden sm:block ml-auto'>
                     {!nav ? <AiOutlineClose size={30} className='text-white font-bold cursor-pointer'/> : <AiOutlineMenu size={30} className='text-white font-bold cursor-pointer'/> }

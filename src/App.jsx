@@ -22,12 +22,10 @@ return (
         <nav className="w-full bg-blue-600 text-white p-4 fixed top-0 z-[1000] right-0 m-0 flex justify-between items-center">
         <h1 className="font-bold">E-LIBRARY</h1>
                 <ul className="hidden container mx-auto lg:flex md:flex justify-around sm:hidden">
-                    <li><Link to='/dashboard' className="hover:text-blue-300">Home</Link></li>
-                    <li><Link to='/dashboard/notifications' className="hover:text-blue-300">Notification</Link></li>
-                    <li><Link to='/dashboard/profile' className="hover:text-blue-300">Profile</Link></li>
-                    <li><Link to='/dashboard/posts' className="hover:text-blue-300">Posts</Link></li>
-                    <li><Link to='/dashboard/users' className="hover:text-blue-300">Users</Link></li>
-                    <li><Link to ='/' id='logout' className="hover:text-blue-300">Logout</Link></li>
+                    <li><Link to='/' className="hover:text-blue-300">Home</Link></li>
+                    <li><Link to='/login' className="hover:text-blue-300">Login</Link></li>
+                    <li><Link to='/register' className="hover:text-blue-300">Register</Link></li>
+                    <li><Link to='/dashboard' className="hover:text-blue-300">Dashboard</Link></li>
                 </ul>
                 <div onClick={handleHide} className='block md:hidden lg:hidden sm:block ml-auto justify-end'>
                     {!nav ? <AiOutlineClose size={30} className='text-white font-bold cursor-pointer'/> : <AiOutlineMenu size={30} className='text-white font-bold cursor-pointer'/> }
@@ -37,8 +35,8 @@ return (
                 <h1 className='w-full text-[14px] font-bold text-[#00df9a]'>Home page</h1>
                 <ul className="uppercase w-full">
                     <li className="border-b border-t border-gray-400 w-full pb-[10px]"><Link to='/' className="text-white hover:text-green-300" onClick={handleHide}>Home</Link></li>
-                    <li className="border-b border-gray-400 w-full pb-[10px]"><Link to='/login' className="text-white hover:text-green-300" onClick={handleHide}>Notification</Link></li>
-                    <li className="border-b border-gray-400 w-full pb-[10px]"><Link to='/register' className="text-white hover:text-green-300" onClick={handleHide}>Profile</Link></li>
+                    <li className="border-b border-gray-400 w-full pb-[10px]"><Link to='/login' className="text-white hover:text-green-300" onClick={handleHide}>Login</Link></li>
+                    <li className="border-b border-gray-400 w-full pb-[10px]"><Link to='/register' className="text-white hover:text-green-300" onClick={handleHide}>Register</Link></li>
                     <li className="border-b border-gray-400 w-full pb-[10px]"><Link to='/dashboard' className="text-white hover:text-green-300" onClick={handleHide}>Dashbard</Link></li>
                 </ul>
             </div>
